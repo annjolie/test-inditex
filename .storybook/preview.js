@@ -5,7 +5,7 @@ import GlobalStyle from '../src/styles/global';
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {
-    default: 'white',
+    default: 'dark',
     values: [
       {
         name: 'white',
