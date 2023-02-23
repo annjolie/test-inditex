@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
-import fonts from './theme/light';
+import { fonts } from './fonts';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}
