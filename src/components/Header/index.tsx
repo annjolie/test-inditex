@@ -1,9 +1,10 @@
 import React from 'react';
 import type { HeaderProps } from './types';
-import { Container, Logo, BagIcon, Text, FirstRow, Separator, SecondRow } from './styles';
+import { Container, Logo, BagIcon, Text, FirstRow, SecondRow } from './styles';
 import NextLink from 'next/link';
+import BreadcrumbsComponent from '../Breadcrumbs';
 
-export default function Header({ imgSrc, numberOfItems, className }: HeaderProps): JSX.Element {
+export default function Header({ imgSrc, numberOfItems, links, className }: HeaderProps): JSX.Element {
   return (
     <Container className={className}>
       <FirstRow>
@@ -19,8 +20,9 @@ export default function Header({ imgSrc, numberOfItems, className }: HeaderProps
           )}
         </NextLink>
       </FirstRow>
-      <Separator />
-      <SecondRow></SecondRow>
+      <SecondRow>
+        <BreadcrumbsComponent links={links} />
+      </SecondRow>
     </Container>
   );
 }

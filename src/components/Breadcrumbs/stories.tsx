@@ -1,15 +1,12 @@
 import type { Meta, Story } from '@storybook/react';
-import logo from '../../assets/styleapp.png';
 
-import Header from '.';
-import type { HeaderProps } from './types';
+import Breadcrumbs from '.';
+import type { BreadcrumbsProps } from './types';
 
 export default {
-  component: Header,
-  title: 'General/Header',
+  component: Breadcrumbs,
+  title: 'General/Breadcrumbs',
   args: {
-    imgSrc: logo,
-    numberOfItems: 3,
     links: [
       {
         label: 'Home',
@@ -27,7 +24,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<HeaderProps> = (args) => <Header {...args} />;
+const Template: Story<BreadcrumbsProps> = (args) => <Breadcrumbs {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

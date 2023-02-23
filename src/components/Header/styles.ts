@@ -3,20 +3,19 @@ import { BsFillBagFill } from 'react-icons/bs';
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.primary.dark};
-  padding: 20px 0;
+  padding: 30px 0 20px 0;
   gap: 1rem;
 `;
 
 export const Logo = styled.img`
-  height: 2.5rem;
-  margin-inline-start: 0.625rem;
+  height: 3rem;
 `;
 
 export const BagIcon = styled(BsFillBagFill)`
   color: ${({ theme }) => theme.colors.primary.white};
   position: absolute;
   inset-inline-end: 1.875rem;
-  inset-block-start: 2.1875rem;
+  inset-block-start: 2.8rem;
 `;
 
 export const Text = styled.span`
@@ -34,10 +33,6 @@ export const FirstRow = styled.div`
   align-items: center;
   height: 2.25rem;
   padding: 0 10px 10px 0;
-`;
-
-export const Separator = styled.hr`
-  border-block-end: ${({ theme }) => theme.colors.primary.gray800};
 `;
 
 export const SecondRow = styled.div`
