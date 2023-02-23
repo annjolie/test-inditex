@@ -3,8 +3,9 @@ import type { HeaderProps } from './types';
 import { Container, Logo, BagIcon, Text, FirstRow, SecondRow } from './styles';
 import NextLink from 'next/link';
 import BreadcrumbsComponent from '../Breadcrumbs';
+import Input from '../Input';
 
-export default function Header({ imgSrc, numberOfItems, links, className }: HeaderProps): JSX.Element {
+export default function Header({ imgSrc, numberOfItems, links, value, onChange, className }: HeaderProps): JSX.Element {
   return (
     <Container className={className}>
       <FirstRow>
@@ -22,6 +23,7 @@ export default function Header({ imgSrc, numberOfItems, links, className }: Head
       </FirstRow>
       <SecondRow>
         <BreadcrumbsComponent links={links} />
+        <Input label="Search" value={value} onChange={onChange} isHeader={true} type="search" />
       </SecondRow>
     </Container>
   );

@@ -4,5 +4,5 @@ export type BreadcrumbsProps = {
 
 export type LinkProp = {
   label: string;
-  href: string;
+  href?: string;
 };
