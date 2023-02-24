@@ -27,8 +27,8 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h1`
-  font-size: 1.0625rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: normal;
   margin-block-end: 15px;
   color: ${({ theme }) => theme.colors.primary.dark};
 
