@@ -18,18 +18,20 @@ export const Search = styled(TextField)<InputStyledProps>`
     }
     >div.Mui-focused >fieldset {
       box-sizing:border-box;
-      border: 2px solid ${theme.colors.primary.info};
-      box-shadow: 0 0 2px 2px rgba(85, 166, 248, 0.5);
+      border: 2px solid ${theme.colors.primary.white};
+      box-shadow: 0 0 3px 2px rgba(255, 255, 255, 0.8);
       top: 0;
     }
     >label {
       &.Mui-focused,
       &.MuiFormLabel-filled {
-        transform: translate(10px, -22px); /* mueve el label */
-        color: ${theme.colors.primary.primary};
+        transform: translate(10px, -27px); /* mueve el label */
+        color: ${theme.colors.primary.white};
+        font-weight: 400;
+      
       }
       &.Mui-focused  {
-        color: ${theme.colors.primary.info};
+        color: ${theme.colors.primary.white};
       }
     }
   `}
