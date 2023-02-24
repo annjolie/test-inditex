@@ -3,12 +3,16 @@ import type { Meta, Story } from '@storybook/react';
 import Input from '.';
 import type { InputProps } from './types';
 import { useState } from 'react';
+import withMaxWidth from '../../storybook/decorators/WithMaxWidth';
+import withPadding from '../../storybook/decorators/WithPadding';
 
 export default {
   component: Input,
   title: 'General/Input',
+  decorators: [withPadding(), withMaxWidth()],
   args: {
     label: 'Search',
+    type: 'search',
     onChange: () => {},
   },
 } as Meta;
