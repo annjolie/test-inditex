@@ -34,7 +34,7 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary.dark};
 
   ${from.tabletPortrait} {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -46,8 +46,8 @@ export const Description = styled.p`
   color: ${({ theme }) => theme.colors.primary.gray700};
 
   ${from.tabletPortrait} {
-    font-size: 0.9375rem;
-    margin-block-end: 1.5625rem;
+    font-size: 0.8rem;
+    margin-block-end: 1rem;
   }
 `;
 
