@@ -10,7 +10,7 @@ export const Search = styled(TextField)<InputStyledProps>`
   >div >fieldset >legend {
     display: block;
   }
-  ${({ isHeader, theme }) =>
+  ${({ $isHeader: isHeader, theme }) =>
     isHeader &&
     `
     >div >fieldset >legend {

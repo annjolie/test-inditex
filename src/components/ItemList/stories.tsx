@@ -2,6 +2,7 @@ import type { Meta, Story } from '@storybook/react';
 
 import ItemList from '.';
 import type { ItemListProps } from './types';
+import React from 'react';
 
 export default {
   component: ItemList,

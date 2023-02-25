@@ -11,7 +11,7 @@ export default function Input({ label, value, type, isHeader, onChange }: InputP
       id="outlined-search"
       label={label}
       value={value}
-      isHeader={isHeader}
+      $isHeader={isHeader}
     />
   );
 }

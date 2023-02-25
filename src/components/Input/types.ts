@@ -8,5 +8,5 @@ export type InputProps = {
 };
 
 export type InputStyledProps = {
-  isHeader?: InputProps['isHeader'];
+  $isHeader?: InputProps['isHeader'];
 };
