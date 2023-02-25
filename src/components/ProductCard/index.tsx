@@ -6,8 +6,8 @@ import NextLink from 'next/link';
 export default function ProductCard({
   imgSrc,
   alt,
-  title,
-  description,
+  brand,
+  model,
   price,
   className,
 }: ProductCardProps): JSX.Element {
@@ -15,8 +15,8 @@ export default function ProductCard({
     <Container className={className}>
       <NextLink href='' >
         <Image src={imgSrc} alt={alt} />
-        <Title>{title}</Title>
-        <Description>{description}</Description>
+        <Title>{brand}</Title>
+        <Description>{model}</Description>
         <Price>{price}</Price>
       </NextLink>
     </Container>
