@@ -5,6 +5,7 @@ const theme = {
       white: '#FFFFFF',
       primary: '#1B46C2',
       secondary: '#64748B',
+      tertiary: '#5482c4',
       info: '#55A6F8',
       success: '#67C23A',
       danger: '#EA4E3D',
