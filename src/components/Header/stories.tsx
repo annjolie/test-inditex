@@ -24,6 +24,7 @@ export default {
         href: '/contact',
       },
     ],
+    options: [],
   },
 } as Meta;
 

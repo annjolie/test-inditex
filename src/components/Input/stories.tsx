@@ -11,9 +11,12 @@ export default {
   title: 'General/Input',
   decorators: [withPadding(), withMaxWidth()],
   args: {
+    id: 'input-search',
+    sizes: 'small',
     label: 'Search',
     type: 'search',
     onChange: () => {},
+    options: [],
   },
 } as Meta;
 

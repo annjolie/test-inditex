@@ -11,6 +11,7 @@ export default function ItemList({ productList, className }: ItemListProps): JSX
         {productList.map((product) => (
           <Grid key={product.id} item xs={12} sm={3} md={3}>
             <ProductCard
+              id={product.id}
               imgSrc={product.imgSrc}
               alt={product.alt}
               brand={product.brand}

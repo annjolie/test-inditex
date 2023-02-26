@@ -5,7 +5,7 @@ import NextLink from 'next/link';
 import BreadcrumbsComponent from '../Breadcrumbs';
 import Input from '../Input';
 
-export default function Header({ imgSrc, numberOfItems, links, value, onChange, className }: HeaderProps): JSX.Element {
+export default function Header({ imgSrc, numberOfItems, links, value, onChange, className, options }: HeaderProps): JSX.Element {
   return (
     <Container className={className}>
       <FirstRow>
@@ -23,7 +23,7 @@ export default function Header({ imgSrc, numberOfItems, links, value, onChange, 
       </FirstRow>
       <SecondRow>
         <BreadcrumbsComponent links={links} />
-        <Input label="Search" value={value} onChange={onChange} isHeader={true} type="search" />
+        <Input label="Search" id='input-search' sizes='small' value={value} onChange={onChange} isHeader={true} type="search" options={options} />
       </SecondRow>
     </Container>
   );

@@ -24,3 +24,11 @@ export const getProductList = async (): Promise<
     .get('/product')
     .then(({ data }) => ({ data, error: null }))
     .catch((error) => handleAxiosError(error));
+
+export const getProductDetails = async (id: number): Promise<
+  { data: ProductType; error: null } | AxiosError
+> =>
+  instance
+    .get(`/product/${id}`)
+    .then(({ data }) => ({ data, error: null }))
+    .catch((error) => handleAxiosError(error));

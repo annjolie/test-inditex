@@ -4,6 +4,7 @@ import type { ProductCardProps } from './types';
 import NextLink from 'next/link';
 
 export default function ProductCard({
+  id,
   imgSrc,
   alt,
   brand,
@@ -13,7 +14,7 @@ export default function ProductCard({
 }: ProductCardProps): JSX.Element {
   return (
     <Container className={className}>
-      <NextLink href='' >
+      <NextLink href={`/product/${id}`} >
         <Image src={imgSrc} alt={alt} />
         <Title>{brand}</Title>
         <Description>{model}</Description>

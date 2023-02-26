@@ -14,7 +14,7 @@ export function MainLayout({ children }: Props) {
       </Head>
 
       <Container>
-        <MenuHeader links={[]} onChange={() => {}} value='' />
+        <MenuHeader links={[]} onChange={() => {}} value='' options={[]}/>
         <Content>{children}</Content>
       </Container>
     </>
