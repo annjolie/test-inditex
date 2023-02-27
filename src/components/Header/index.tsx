@@ -5,25 +5,37 @@ import NextLink from 'next/link';
 import BreadcrumbsComponent from '../Breadcrumbs';
 import Input from '../Input';
 
-export default function Header({ imgSrc, numberOfItems, links, value, onChange, className, options }: HeaderProps): JSX.Element {
+export default function Header({
+  numberOfItems,
+  links,
+  value,
+  onChange,
+  className,
+  options,
+}: HeaderProps): JSX.Element {
   return (
     <Container className={className}>
       <FirstRow>
         <NextLink href="/">
-          <Logo src={imgSrc} />
+          <Logo src="/assets/styleapp.png" />
         </NextLink>
         <NextLink href="/">
-          {numberOfItems && (
-            <>
-              <BagIcon size={20} />
-              <Text>{numberOfItems}</Text>
-            </>
-          )}
+          <BagIcon size={20} />
+          {numberOfItems > 0 && <Text>{numberOfItems}</Text>}
         </NextLink>
       </FirstRow>
       <SecondRow>
         <BreadcrumbsComponent links={links} />
-        <Input label="Search" id='input-search' sizes='small' value={value} onChange={onChange} isHeader={true} type="search" options={options} />
+        <Input
+          label="Search"
+          id="input-search"
+          sizes="small"
+          value={value}
+          onChange={onChange}
+          isHeader={true}
+          type="search"
+          options={options}
+        />
       </SecondRow>
     </Container>
   );

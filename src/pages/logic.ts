@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { getProductList } from '@/axios';
 import type { ProductCardProps } from '@/components/ProductCard/types';
+import ProductContext from '@/containers/context';
 
 export const useLogic = () => {
   const [productList, setProductList] = useState<ProductCardProps[]>([
@@ -77,19 +78,21 @@ export const useLogic = () => {
       price: '$450',
     },
   ]);
+  
+  const { updateBreadCrumbs } = useContext(ProductContext);
 
   useEffect(() => {
     async function fetchData() {
       const { data: productListData } = await getProductList();
       if (productListData) {
-        const productCards = productListData.map(product => {
-          const productCard : ProductCardProps = {
+        const productCards = productListData.map((product) => {
+          const productCard: ProductCardProps = {
             id: product.id,
             imgSrc: product.image,
             alt: product.name,
             brand: product.name,
             model: product.model,
-            price: product.price
+            price: product.price,
           };
           return productCard;
         });
@@ -98,6 +101,15 @@ export const useLogic = () => {
     }
     fetchData();
   }, []);
+
+  useEffect(() => {
+    updateBreadCrumbs([
+      {
+        label: 'Home',
+        href: '/',
+      },
+    ]);
+  }, [updateBreadCrumbs]);
 
   return {
     productList,

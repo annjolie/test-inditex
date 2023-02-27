@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Button from '@/components/Button';
+import Select from '@/components/Select';
 
 export const Title = styled.h1`
   font-size: 2.12rem;
@@ -28,3 +30,15 @@ export const Image = styled.img`
   width: 100%;
   height: auto;
 `;
+
+export const ActionsContainer = styled.div`
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    >button {
+      max-width: fit-content; 
+    } 
+`;
+

@@ -1,7 +1,10 @@
+import { ReactEventHandler } from "react";
+
 export type SelectProps = {
-  id: string;
   label?: string;
   options: SelectOptionProps[];
+  onSelect: (option: SelectOptionProps) => void;
+  value: SelectOptionProps;
 };
 
 export type SelectOptionProps = {

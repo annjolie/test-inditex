@@ -1,9 +1,20 @@
-import { Title, Text, DescriptionContainer, DescriptionTitle, Image, Bold, Span } from './styles';
+import { Title, Text, DescriptionContainer, DescriptionTitle, Image, Bold, Span, ActionsContainer } from './styles';
 import { useLogic } from './logic';
 import { Box, Grid } from '@material-ui/core';
+import Button from '@/components/Button';
+import Select from '@/components/Select';
 
 export default function Home() {
-  const { product } = useLogic();
+  const {
+    product,
+    storageList,
+    colorList,
+    storageSelected,
+    colorSelected,
+    handleStorageChange,
+    handleColorChange,
+    handleAddToCart,
+  } = useLogic();
 
   return (
     <>
@@ -63,12 +74,9 @@ export default function Home() {
                 </Text>
               </DescriptionContainer>
               <ActionsContainer>
-                <Button variant="contained" color="primary" onClick={() => {}}>
-                  Add to cart
-                </Button>
-                <Button variant="contained" color="secondary" onClick={() => {}}>
-                  Buy now
-                </Button>
+                <Select label="Storage" options={storageList} value={storageSelected} onSelect={handleStorageChange} />
+                <Select label="Color" options={colorList} value={colorSelected} onSelect={handleColorChange} />
+                <Button label="Add to cart" size="medium" onClick={handleAddToCart} />
               </ActionsContainer>
             </Box>
           </Grid>

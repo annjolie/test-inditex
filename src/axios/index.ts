@@ -17,18 +17,20 @@ const handleAxiosError = (error: Error): AxiosError => ({
   error,
 });
 
-export const getProductList = async (): Promise<
-  { data: ProductType[]; error: null } | AxiosError
-> =>
+export const getProductList = async (): Promise<{ data: ProductType[]; error: null } | AxiosError> =>
   instance
     .get('/product')
     .then(({ data }) => ({ data, error: null }))
     .catch((error) => handleAxiosError(error));
 
-export const getProductDetails = async (id: number): Promise<
-  { data: ProductType; error: null } | AxiosError
-> =>
+export const getProductDetails = async (id: number): Promise<{ data: ProductType; error: null } | AxiosError> =>
   instance
     .get(`/product/${id}`)
+    .then(({ data }) => ({ data, error: null }))
+    .catch((error) => handleAxiosError(error));
+
+export const addProductToCart = async (id: number, color: string, storage: string): Promise<{ data: ProductType; error: null } | AxiosError> =>
+  instance
+    .post(`/addToCart`, { id, color, storage})
     .then(({ data }) => ({ data, error: null }))
     .catch((error) => handleAxiosError(error));
