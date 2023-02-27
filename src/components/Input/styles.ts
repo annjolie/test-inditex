@@ -2,7 +2,7 @@ import { TextField } from '@mui/material';
 import styled from 'styled-components';
 import { InputStyledProps } from './types';
 
-export const Search = styled(TextField)<InputStyledProps>`
+export const InputStyled = styled(TextField)<InputStyledProps>`
   & {
     background-color: ${({ theme }) => theme.colors.primary.gray100};
   }
@@ -10,7 +10,7 @@ export const Search = styled(TextField)<InputStyledProps>`
   >div >fieldset >legend {
     display: block;
   }
-  ${({ isHeader, theme }) =>
+  ${({ $isHeader: isHeader, theme }) =>
     isHeader &&
     `
     >div >fieldset >legend {

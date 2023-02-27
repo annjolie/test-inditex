@@ -1,19 +1,15 @@
-import MainPoster from '@/components/MainPoster';
 import { Title } from './styles';
-import MovieGroup from '@/components/MovieGroup';
 import { useLogic } from './logic';
+import ItemList from '@/components/ItemList';
 
 export default function Home() {
-  const { popularMovies, searchResults, movieForPoster } = useLogic();
+  const { productList } = useLogic();
 
   return (
     <>
       <main>
-        {movieForPoster && <MainPoster {...movieForPoster} />}
-        <Title>Peliculas populares</Title>
-        <MovieGroup movies={popularMovies} />
-        <Title>Todas las peliculas</Title>
-        <MovieGroup movies={searchResults} />
+        <Title>List View</Title>
+        <ItemList productList={productList} />
       </main>
     </>
   );

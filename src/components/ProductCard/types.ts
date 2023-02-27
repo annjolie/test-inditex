@@ -1,9 +1,10 @@
 export type ProductCardProps = {
-    id?: string;
+    id?: number;
     imgSrc?: string;
     alt?: string;
     brand?: string;
     model?: string;
-    price?: number;
+    price?: string;
     //addToCart: ? add to cart function;
-    className?: string };
+    className?: string
+};

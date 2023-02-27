@@ -1,4 +1,9 @@
+import { SelectOptionProps } from "../Select/types";
+
 export type InputProps = {
+  id: string;
+  options: SelectOptionProps[];
+  sizes?: 'small' | 'medium';
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
@@ -8,5 +13,5 @@ export type InputProps = {
 };
 
 export type InputStyledProps = {
-  isHeader?: InputProps['isHeader'];
+  $isHeader?: InputProps['isHeader'];
 };

@@ -1,8 +1,11 @@
 import Head from 'next/head';
-import { Container, Content, MenuHeader } from './styles';
+import { Container, Content } from './styles';
+import Header from '@/components/Header';
 import type { Props } from './types';
+import { useLogic } from './logic';
 
 export function MainLayout({ children }: Props) {
+  const { products, breadCrumbs } = useLogic();
   return (
     <>
       <Head>
@@ -14,7 +17,7 @@ export function MainLayout({ children }: Props) {
       </Head>
 
       <Container>
-        <MenuHeader />
+        <Header numberOfItems={products.length} links={breadCrumbs} onChange={() => {}} value='' options={[]}/>
         <Content>{children}</Content>
       </Container>
     </>
