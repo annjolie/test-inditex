@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useReducer } from 'react';
+import React, { useMemo, useReducer } from 'react';
 import ProductContext, { ProductContextState } from '../context';
 import { LinkProp } from '@/components/Breadcrumbs/types';
 
