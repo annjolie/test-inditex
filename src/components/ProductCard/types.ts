@@ -5,6 +5,5 @@ export type ProductCardProps = {
     brand?: string;
     model?: string;
     price?: string;
-    //addToCart: ? add to cart function;
     className?: string
 };

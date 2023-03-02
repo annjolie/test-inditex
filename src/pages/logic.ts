@@ -78,8 +78,8 @@ export const useLogic = () => {
       price: '$450',
     },
   ]);
-  
-  const { updateBreadCrumbs } = useContext(ProductContext);
+
+  const { setBreadcrumbs } = useContext(ProductContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -103,13 +103,13 @@ export const useLogic = () => {
   }, []);
 
   useEffect(() => {
-    updateBreadCrumbs([
+    setBreadcrumbs([
       {
         label: 'Home',
         href: '/',
       },
     ]);
-  }, [updateBreadCrumbs]);
+  }, [setBreadcrumbs]);
 
   return {
     productList,

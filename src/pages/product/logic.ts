@@ -67,7 +67,7 @@ export const useLogic = () => {
   const [storageSelected, setStorageSelected] = useState<SelectOptionProps>({ id: '1', label: '256GB SSD' });
   const [colorSelected, setColorSelected] = useState<SelectOptionProps>({ id: '1', label: 'Black' });
 
-  const { productAddedToCart, updateBreadCrumbs } = useContext(ProductContext);
+  const { setProducts, setBreadcrumbs } = useContext(ProductContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -90,17 +90,17 @@ export const useLogic = () => {
   const handleAddToCart = useCallback(() => {
     async function sendData() {
       const { data: productData } = await addProductToCart(productId, colorSelected.label, storageSelected.label);
-      productAddedToCart(productId);
+      setProducts(value => [...value, productId]);
       if (productData) {
         setProduct(productData);
       }
     }
 
     sendData();
-  }, [colorSelected.label, productAddedToCart, productId, storageSelected.label]);
+  }, [colorSelected.label, setProducts, productId, storageSelected.label]);
 
   useEffect(() => {
-    updateBreadCrumbs([
+    setBreadcrumbs([
       {
         label: 'Home',
         href: '/',
@@ -110,7 +110,7 @@ export const useLogic = () => {
         href: `/product/${productId}`,
       },
     ]);
-  }, [updateBreadCrumbs, productId]);
+  }, [setBreadcrumbs, productId]);
 
   return {
     product,

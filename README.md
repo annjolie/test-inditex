@@ -7,7 +7,7 @@ Esta prueba consiste en la creación de una mini-aplicación para comprar dispos
 # Scripts disponibles
 En este proyecto, podemos executar los seguientes comandos:
 
-# npm start
+# npm run dev
 Ejecuta la aplicación en modo desarrollo. Abre el navegador en la ruta http://localhost:3000
 
 La página volverá a cargar cuando se realice cambios. Podemos ver errores de lintado en la consola.

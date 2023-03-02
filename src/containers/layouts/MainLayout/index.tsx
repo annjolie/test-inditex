@@ -5,7 +5,7 @@ import type { Props } from './types';
 import { useLogic } from './logic';
 
 export function MainLayout({ children }: Props) {
-  const { products, breadCrumbs } = useLogic();
+  const { products, breadcrumbs } = useLogic();
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ export function MainLayout({ children }: Props) {
       </Head>
 
       <Container>
-        <Header numberOfItems={products.length} links={breadCrumbs} onChange={() => {}} value='' options={[]}/>
+        <Header numberOfItems={products.length} links={breadcrumbs} onChange={() => {}} value='' options={[]}/>
         <Content>{children}</Content>
       </Container>
     </>

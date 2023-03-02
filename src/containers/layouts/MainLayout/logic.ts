@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import ProductContext from '@/containers/context';
 
 export const useLogic = () => {
-  const { products, breadCrumbs } = useContext(ProductContext);
+  const { products, breadcrumbs } = useContext(ProductContext);
 
-  return { products, breadCrumbs };
+  return { products, breadcrumbs };
 };

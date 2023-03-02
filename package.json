@@ -1,7 +1,10 @@
 {
-  "name": "rateflix",
+  "name": "styleapp",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.18.1"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
