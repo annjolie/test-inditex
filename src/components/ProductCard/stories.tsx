@@ -7,12 +7,10 @@ export default {
   component: ProductCard,
   title: 'General/ProductCard',
   args: {
-    imgSrc:
-      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    imgSrc: 'https://cdn.pixabay.com/photo/2013/07/12/18/39/smartphone-153650_1280.png',
     alt: 'Product image',
-    brand: 'Green double couch with wooden legs',
-    model:
-      'This sofa is perfect for modern tropical spaces, baroque inspired spaces, earthy toned spaces and for people who love a chic design with a sprinkle of vintage design.',
+    brand: 'Lorem Ipsum',
+    model: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id consequat quam',
     price: '$450',
   },
 } as Meta;

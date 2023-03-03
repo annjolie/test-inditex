@@ -17,7 +17,7 @@ export default function Header({
     <Container className={className}>
       <FirstRow>
         <NextLink href="/">
-          <Logo src="/assets/styleapp.png" />
+          <Logo src="/assets/logo_transparent.png" />
         </NextLink>
         <NextLink href="/">
           <BagIcon size={20} />

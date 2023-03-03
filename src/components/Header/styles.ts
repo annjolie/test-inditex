@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 3rem;
+  height: 8rem;
 `;
 
 export const BagIcon = styled(BsFillBagFill)`
@@ -40,4 +40,5 @@ export const SecondRow = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px 0 10px;
+  margin-inline-start: 1.8rem;
 `;

@@ -19,8 +19,7 @@ export const useLogic = () => {
     ram: '16GB',
     os: 'Windows 10 Home',
     screen: '15.6" FHD',
-    image:
-      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    image: 'https://cdn.pixabay.com/photo/2013/07/12/18/39/smartphone-153650_1280.png',
     battery: '4-cell, 70 Whr',
     camera: '720p HD',
     dimensions: '14.96" x 10.43" x 0.89"',
@@ -90,7 +89,7 @@ export const useLogic = () => {
   const handleAddToCart = useCallback(() => {
     async function sendData() {
       const { data: productData } = await addProductToCart(productId, colorSelected.label, storageSelected.label);
-      setProducts(value => [...value, productId]);
+      setProducts((value) => [...value, productId]);
       if (productData) {
         setProduct(productData);
       }

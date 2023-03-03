@@ -27,7 +27,7 @@ export const Span = styled.span`
 `;
 
 export const Image = styled.img`
-  width: 100%;
+  width: 50%;
   height: auto;
 `;
 
