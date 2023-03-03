@@ -17,7 +17,7 @@ Construye la aplicación para producción en la carpeta build Empaqueta correcta
 
 La compilación es minificada y los nombres de los ficheros incluyen los hashes. Tu aplicación esta preparada para ser implementada
 
-# yarn run test
+# npm run test
 Inicia la ejecución de test en modo interactivo de observador
 
 # npm run lint
